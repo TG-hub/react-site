@@ -11,7 +11,7 @@ const BasketProvider = ({children}) => {
     [basket, setBasket] = useState ('')
 
     return (
-        <BasketContext.Provider value={{basket, setBasket: updateBasket}}>
+        <BasketContext.Provider value={{basket, updateBasket: setBasket }}>
             {children}
         </BasketContext.Provider>
 

@@ -13,6 +13,7 @@ import ContextSource from './context/root'
 
 function App() {
   return (
+    <ContextSource>
     <Router>
       <Switch>
         <Route exact path='/' component={SignUp}/>
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Item/:id' component={Item} />
       </Switch>
     </Router>
+    </ContextSource>
   );
 }
 
