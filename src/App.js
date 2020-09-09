@@ -9,6 +9,7 @@ import SignUp from './pages/sign-up'
 import Confirmation from './pages/confirmation'
 import Item from './pages/item'
 import Checkout from './pages/checkout'
+import ContextSource from './context/root'
 
 function App() {
   return (
