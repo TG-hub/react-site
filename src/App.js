@@ -9,9 +9,11 @@ import SignUp from './pages/sign-up'
 import Confirmation from './pages/confirmation'
 import Item from './pages/item'
 import Checkout from './pages/checkout'
+import ContextSource from './context/root'
 
 function App() {
   return (
+    <ContextSource>
     <Router>
       <Switch>
         <Route exact path='/' component={SignUp}/>
@@ -21,6 +23,7 @@ function App() {
         <Route path='/Item/:id' component={Item} />
       </Switch>
     </Router>
+    </ContextSource>
   );
 }
 
