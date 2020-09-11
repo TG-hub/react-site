@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 
-function Input(props) {
-    const [input, setInput] = useState('')
-    const textSetter = (event) => setInput(event.target.value)
-
-    const style = {fontFamily: 'Arial',
+ export const styles = {fontFamily: 'Arial',
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: 16,
         borderRadius: 10,
         color: '#0569FF'}
 
+function Input(props) {
+    const [input, setInput] = useState('')
+    const textSetter = (event) => setInput(event.target.value)
+
+   
+
     return (
         
         <div>
-            <input style={style} type="text" onChange={textSetter} placeholder={props.placeholder} />
+            <input style={styles} type="text" onChange={textSetter} placeholder={props.placeholder} />
         </div>
     )
 }
