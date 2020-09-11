@@ -14,7 +14,7 @@ function Input(props) {
     return (
         
         <div>
-            <input style={style} type="text" onChange={textSetter}  />
+            <input style={style} type="text" onChange={textSetter} placeholder={props.placeholder} />
         </div>
     )
 }
