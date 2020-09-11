@@ -11,9 +11,9 @@ const ItemProvider = ({children}) => {
     const [item, setItem] = useState ('')
 
     return(
-        <ItemContext.provider value={{item, updateItem :setItem }}>
+        <ItemContext.Provider value={{item, updateItem :setItem }}>
             {children}
-        </ItemContext.provider>
+        </ItemContext.Provider>
     )
 }
 
