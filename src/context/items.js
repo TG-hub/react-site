@@ -1,8 +1,8 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-export default ItemProvider
 
-export const itemContext = createContext({
+
+export const ItemContext = createContext({
     item: '',
     updateItem: () => null
 })
@@ -11,9 +11,10 @@ const ItemProvider = ({children}) => {
     const [item, setItem] = useState ('')
 
     return(
-        <itemContext.provider value={{item,updateItem :setItem }}>
+        <ItemContext.Provider value={{item, updateItem :setItem }}>
             {children}
-        </itemContext.provider>
+        </ItemContext.Provider>
     )
 }
 
+export default ItemProvider
