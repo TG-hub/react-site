@@ -1,6 +1,6 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-export default BasketProvider
+
 
 export const BasketContext = createContext({
     basket: '',
@@ -8,7 +8,7 @@ export const BasketContext = createContext({
 })
 
 const BasketProvider = ({children}) => {
-    [basket, setBasket] = useState ('')
+    const [basket, setBasket] = useState ('')
 
     return (
         <BasketContext.Provider value={{basket, updateBasket: setBasket }}>
@@ -17,3 +17,5 @@ const BasketProvider = ({children}) => {
 
     )
 }
+
+export default BasketProvider
