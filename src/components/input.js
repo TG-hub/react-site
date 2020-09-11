@@ -4,7 +4,7 @@ function Input(props) {
     const [input, setInput] = useState('')
     const textSetter = (event) => setInput(event.target.value)
 
-    const style = {fontFamily: 'Roboto',
+    const style = {fontFamily: 'Arial',
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: 16,
