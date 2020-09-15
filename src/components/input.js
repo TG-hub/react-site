@@ -7,16 +7,20 @@ import React, { useState } from 'react'
         borderRadius: 10,
         color: '#0569FF'}
 
-function Input(props) {
-    const [input, setInput] = useState('')
-    const textSetter = (event) => setInput(event.target.value)
+
+
+
+const Input = (props) => {
+    
+    
+    //const textSetter = (event) => setInput(event.target.value)
 
    
 
     return (
         
         <div>
-            <input style={styles} type="text" onChange={textSetter} placeholder={props.placeholder} />
+            <input style={styles} type="text" onChange={props.textSetter} placeholder={props.placeholder} />
         </div>
     )
 }

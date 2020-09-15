@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import {styles} from './input'
-import Input, {input} from './input'
 
 
-function Button (props) {
-    const [submit, setSubmit] = useState('')
-    const clickHandler = () => setSubmit(submit)
+
+const Button = (props) => {
+    
 
     return (
         <div>
-            <button style={styles} onClick={clickHandler}>{props.buttonName}</button>
+            <button  onClick={props.submit}>{props.buttonName}</button>
         </div>
     )
 }
