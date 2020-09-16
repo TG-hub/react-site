@@ -3,11 +3,12 @@ import Input from '../../components/input'
 import Button from '../../components/button'
 import { useState } from 'react';
 import '../../App.css'
+import './sign-up.css'
 
 
 
 
-  function App(props) {
+  function SignUp(props) {
   
   const [input, setInput] = useState('')
   const [inputTwo, setInputTwo] = useState('')
@@ -29,7 +30,7 @@ import '../../App.css'
   return (
     <div className='Background' >
       <h1>Please sign up to get started!</h1>
-      <div style={{alignSelf: 'center', textAlign: 'center', display: 'flex', justifyContent: 'center', height: '50vh', width: '50vh', flexDirection: 'column', backgroundColor: '#F59606', borderRadius: '20px', gap: '20px' }}>
+      <div className='Signup'>
       <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Name'}   />
       <Input textSetter={(event) => setInputTwo(event.target.value)} placeholder={'Email'}   />
       <Button  buttonName={'Sign up'} submit={submitter}/>
@@ -38,4 +39,4 @@ import '../../App.css'
   );
 }
 
-export default App;
+export default SignUp;
