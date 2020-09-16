@@ -10,6 +10,7 @@
   border-radius: 15px;
   padding: 10px;
   color: #0569FF;
+  border: none
 }
 
 .Input {
@@ -20,7 +21,7 @@ font-size: 16px;
 line-height: 22px;
 border-radius: 15px;
 padding: 5px;
-
+border: none;
 color: #0569FF;
 
 }
