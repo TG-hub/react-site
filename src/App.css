@@ -29,11 +29,10 @@ color: #0569FF;
 .Background {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: normal;
   height: 100vh;
  flex-direction: column;
  background-color: #B0B0B0;
- 
 }
 
 
