@@ -14,7 +14,7 @@ function Home(props) {
   
 
   return (
-    <div className='Background'>
+    <div className='Container'>
       <h1 className='Title'>Welcome to the Store!</h1>
       <div className='Item-container'>
         {ItemList.map((items,) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{

@@ -28,7 +28,7 @@ import './sign-up.css'
 
 
   return (
-    <div className='Background' >
+    <div className='Container' >
       <h1>Please sign up to get started!</h1>
       <div className='Signup'>
       <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Name'}   />

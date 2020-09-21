@@ -1,3 +1,8 @@
+html {
+  
+  background-color: #B0B0B0;
+}
+
 .App {
   text-align: center;
   
@@ -27,15 +32,11 @@ color: #0569FF;
 
 }
 
-.Background {
+.Container {
   text-align: center;
   display: flex;
-  justify-content: normal;
-  height: 100vh;
+  
  flex-direction: column;
- background-color: #B0B0B0;
- 
- 
 }
 
 
