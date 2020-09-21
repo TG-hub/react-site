@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+import ItemList from '../pages/home/items-list'
 
 
 
@@ -8,7 +9,7 @@ export const ItemContext = createContext({
 })
 
 const ItemProvider = ({children}) => {
-    const [item, setItem] = useState ('')
+    const [item, setItem] = useState ({ItemList})
 
     return(
         <ItemContext.Provider value={{item, updateItem :setItem }}>

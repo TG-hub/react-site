@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../../components/input'
-import Button from '../../components/button'
+import Input from '../../components/input/input'
+import Button from '../../components/button/button'
 import { useState } from 'react';
 import '../../App.css'
 import './sign-up.css'
@@ -28,7 +28,7 @@ import './sign-up.css'
 
 
   return (
-    <div className='Background' >
+    <div className='Container' >
       <h1>Please sign up to get started!</h1>
       <div className='Signup'>
       <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Name'}   />

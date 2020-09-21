@@ -1,0 +1,19 @@
+.Item {
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    flex-direction: Column;
+    background-color: #F59606;
+    border-radius: 20px;
+    
+}
+
+.Item-Image {
+    border-radius: 20px;
+    width: 140px;
+    height: 140px
+}
