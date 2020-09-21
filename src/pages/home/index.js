@@ -17,7 +17,9 @@ function Home(props) {
     <div className='Background'>
       <h1 className='Title'>Welcome to the Store!</h1>
       <div className='Item-container'>
-        {ItemList.map((items,) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>(props.history.push(/item/${items.id}), item.updateItem(items.id))}/>)}
+        {ItemList.map((items,) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{
+        props.history.push(`/item/${items.id}`)
+        item.updateItem(items.id)}}  />)}
       </div>
     </div>
   );
