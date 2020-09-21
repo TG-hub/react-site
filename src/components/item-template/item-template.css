@@ -4,8 +4,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     flex-direction: Column;
     background-color: #F59606;
     border-radius: 20px;
@@ -14,6 +14,6 @@
 
 .Item-Image {
     border-radius: 20px;
-    width: 75px;
-    height: 75px
+    width: 140px;
+    height: 140px
 }
