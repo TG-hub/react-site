@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .Button {
@@ -33,6 +34,8 @@ color: #0569FF;
   height: 100vh;
  flex-direction: column;
  background-color: #B0B0B0;
+ height: 100%;
+ 
 }
 
 
