@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../../components/input'
-import Button from '../../components/button'
+import Input from '../../components/input/input'
+import Button from '../../components/button/button'
 import { useState } from 'react';
 import '../../App.css'
 import './sign-up.css'

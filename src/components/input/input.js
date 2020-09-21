@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../App.css'
+import '../../App.css'
 
  /*export const styles = {fontFamily: 'Arial',
         fontStyle: 'normal',

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import '../../App.css'
 import './home.css'
-import ItemTemplate from '../../components/item-template'
+import '../../components/item-template/item-template.css'
+import ItemTemplate from '../../components/item-template/item-template'
 import ItemList from './items-list.js'
 import {ItemContext} from '../../context/items'
 
@@ -16,7 +17,7 @@ function Home(props) {
     <div className='Background'>
       <h1 className='Title'>Welcome to the Store!</h1>
       <div className='Item-container'>
-        {ItemList.map((items,) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>(props.history.push(items.location), item.updateItem(items.location))}/>)}
+        {ItemList.map((items,) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>(props.history.push(/item/${items.id}), item.updateItem(items.id))}/>)}
       </div>
     </div>
   );
