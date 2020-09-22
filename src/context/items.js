@@ -4,7 +4,7 @@ import ItemList from '../pages/home/items-list'
 
 
 export const ItemContext = createContext({
-    item: {},
+    item: '',
     updateItem: () => null
 })
 
