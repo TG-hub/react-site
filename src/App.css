@@ -35,8 +35,8 @@ color: #0569FF;
 .Container {
   text-align: center;
   display: flex;
-  
  flex-direction: column;
+ gap: 50px;
 }
 
 
