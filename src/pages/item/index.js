@@ -21,6 +21,8 @@ const Item = (props) => {
   const {id} = useParams()
   const selection = _.find(ItemList, {id: itemPage.item && id} )
   const OtherProduct = _.sampleSize(ItemList, 6)
+
+  
   
   const [option, setOption] = useState ('One')
   
@@ -38,22 +40,16 @@ const Item = (props) => {
               <option value={'Two'}>Two</option>
             </select>
         </div>
-        <button className='Button' onClick={() => basket.updateBasket(selection)}>Add to Basket</button>
+        <button className='Button' onClick={() => basket.updateBasket((prevState) => [...prevState, selection])}>Add to Basket</button> <button onClick={() => console.log({...basket})}>log</button>
       </div>
       <div className='Other-Products'>
       {OtherProduct.map((items) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{
         props.history.push(`/item/${items.id}`)
         item.updateItem(items.id)}}  />)}
       </div>
+     
     </div>
   );
 }
 
 export default Item;
-/*<div className='Item-container'>
-        
-        
-        {ItemList.map((items) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{
-        props.history.push(`/item/${items.id}`)
-        item.updateItem(items.id)}}  />)}
-      </div>*/
