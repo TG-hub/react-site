@@ -30,6 +30,10 @@ const Item = (props) => {
 
   return (
     <div className='Container'>
+      <div className='Nav-Bar'>
+        <button className='Round-Button' onClick={() => props.history.push('/home')}>Back To Homepage</button>
+        <button className='Round-Button' onClick={() => props.history.push('/checkout')}>To Checkout</button>
+      </div>
       <div className='Item-Display'>
         {option === 'One' ? <img className='product-image' src={selection.image} /> : <img className='product-image' src={selection.imageTwo}/> }
         <div className='Item-Details'>
@@ -40,7 +44,7 @@ const Item = (props) => {
               <option value={'Two'}>Two</option>
             </select>
         </div>
-        <button className='Button' onClick={() => basket.updateBasket((prevState) => [...prevState, selection])}>Add to Basket</button> <button onClick={() => console.log({...basket})}>log</button>
+        <button className='Button' onClick={() => basket.updateBasket(selection)}>Add to Basket</button> <button onClick={() => console.log({...basket})}>log</button>
       </div>
       <div className='Other-Products'>
       {OtherProduct.map((items) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{
