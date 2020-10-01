@@ -35,7 +35,7 @@ const Item = (props) => {
         <button className='Round-Button' onClick={() => props.history.push('/checkout')}>To Checkout</button>
       </div>
       <div className='Item-Display'>
-        <img className='product-image' src={selection.image.map(() =>  selection.image[option]) }/>
+        <img className='product-image' src={selection.image[option]}/>
         <div className='Item-Details'>
           <p>{selection.title}</p>
           <p>{selection.price}</p>
