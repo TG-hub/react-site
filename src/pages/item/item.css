@@ -41,7 +41,7 @@
     flex-direction: Column;
     background-color: #F59606;
     border-radius: 20px;
-    
+    margin: 20px;
 }
 
 .Item-Image {

@@ -40,8 +40,7 @@ const Item = (props) => {
           <p>{selection.title}</p>
           <p>{selection.price}</p>
             <select onChange={(event) => setOption(event.target.value)}>
-              <option value={0}>Option One</option>
-              <option value={1}>Option Two</option>
+              {selection.image.map((item, index) => <option value={index}>Option {index+1}</option>)}
             </select>
         </div>
         <button className='Button' onClick={() => updateBasket(selection)}>Add to Basket</button> 
