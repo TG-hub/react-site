@@ -1,6 +1,6 @@
 
 
-.Item-container {
+.Item-Container {
     display: flex;
     flex-direction: row;
     gap: 30px;

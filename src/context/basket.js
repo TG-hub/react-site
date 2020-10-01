@@ -18,9 +18,9 @@ const BasketProvider = ({children}) => {
     const [basket, setBasket] = useState ([])
 
  
-    const updateBasket = (ItemList) => {
-    const incrementer = _.find(basket, {id: ItemList.id})
-        {incrementer === undefined ? setBasket((prevState) => [...prevState, {id: ItemList.id, quantity: 1}]) : setBasket(() => [ {id: ItemList.id, quantity: incrementer.quantity +1}])}
+    const updateBasket = (itemList) => {
+    const incrementer = _.find(basket, {id: itemList.id})
+        {incrementer ?  setBasket(() => [ {id: itemList.id, quantity: incrementer.quantity +1}]) : setBasket((prevState) => [...prevState, {id: itemList.id, quantity: 1}])}
 
       }
 

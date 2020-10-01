@@ -14,18 +14,18 @@ import ItemTemplate from '../../components/item-template/item-template'
 
 const Item = (props) => {
 
-  const basket = useContext(BasketContext)
+  const {updateBasket} = useContext(BasketContext)
   const item = useContext(ItemContext)
   
   const itemPage = useContext(ItemContext)
   const {id} = useParams()
-  const selection = _.find(ItemList, {id: itemPage.item && id} )
+  const selection = _.find(ItemList, {id:  id} )
   const OtherProduct = _.sampleSize(ItemList, 6)
 
   
   
-  const [option, setOption] = useState ('One')
   
+  const [option, setOption] = useState (1)
 
 
   return (
@@ -35,16 +35,16 @@ const Item = (props) => {
         <button className='Round-Button' onClick={() => props.history.push('/checkout')}>To Checkout</button>
       </div>
       <div className='Item-Display'>
-        {option === 'One' ? <img className='product-image' src={selection.image} /> : <img className='product-image' src={selection.imageTwo}/> }
+        {selection.image.map(() => <img className='product-image' src= {`image.${option}`} />)}
         <div className='Item-Details'>
           <p>{selection.title}</p>
           <p>{selection.price}</p>
             <select onChange={(event) => setOption(event.target.value)}>
-              <option value={'One'}>One</option>
-              <option value={'Two'}>Two</option>
+              <option value={1}>Option One</option>
+              <option value={2}>Option Two</option>
             </select>
         </div>
-        <button className='Button' onClick={() => basket.updateBasket(selection)}>Add to Basket</button> <button onClick={() => console.log({...basket})}>log</button>
+        <button className='Button' onClick={() => updateBasket(selection)}>Add to Basket</button> 
       </div>
       <div className='Other-Products'>
       {OtherProduct.map((items) => <ItemTemplate image={items.image} title={items.title} price={items.price} onClick={() =>{
