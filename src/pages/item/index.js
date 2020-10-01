@@ -25,7 +25,7 @@ const Item = (props) => {
   
   
   
-  const [option, setOption] = useState (1)
+  const [option, setOption] = useState (0)
 
 
   return (
@@ -35,13 +35,13 @@ const Item = (props) => {
         <button className='Round-Button' onClick={() => props.history.push('/checkout')}>To Checkout</button>
       </div>
       <div className='Item-Display'>
-        {selection.image.map(() => <img className='product-image' src= {`image.${option}`} />)}
+        <img className='product-image' src={selection.image.map(() =>  selection.image[option]) }/>
         <div className='Item-Details'>
           <p>{selection.title}</p>
           <p>{selection.price}</p>
             <select onChange={(event) => setOption(event.target.value)}>
-              <option value={1}>Option One</option>
-              <option value={2}>Option Two</option>
+              <option value={0}>Option One</option>
+              <option value={1}>Option Two</option>
             </select>
         </div>
         <button className='Button' onClick={() => updateBasket(selection)}>Add to Basket</button> 

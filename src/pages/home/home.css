@@ -3,11 +3,7 @@
 .Item-Container {
     display: flex;
     flex-direction: row;
-    gap: 30px;
     flex-wrap: wrap;
-    flex-grow: 7;
-    margin: 30px;
     justify-content: space-evenly;
     
-
-}
+}   
