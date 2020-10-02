@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import _, { sum } from 'lodash'
 import './checkout.css'
-import {BasketContext} from '../../context/basket'
+import BasketProvider, {BasketContext}  from '../../context/basket'
 import ItemList from '../home/items-list'
 import Input from '../../components/input/input'
 import Button from '../../components/button/button'
@@ -39,7 +39,7 @@ const Checkout = (props) => {
         </ul>
       </div>
       <div>
-        <p>Total Cost:</p>
+        <p>Total Cost: {() => _.sum(priceTotal)}</p>
       </div>
       <div>
           <Input  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />

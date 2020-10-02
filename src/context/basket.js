@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import _ from 'lodash'
 import ItemList from '../pages/home/items-list'
 import Item from '../pages/item'
@@ -16,7 +16,16 @@ export const BasketContext = createContext({
 
 const BasketProvider = ({children}) => {
     const [basket, setBasket] = useState ([])
-
+    
+    const priceTotal = () => {
+        basket.map((selItem) => {
+        const items = _.find(basket, {id: selItem.id})
+        return (<div>
+            {items.quantity*ItemList.price}
+        </div>)
+    }
+    )
+}
  
     const updateBasket = (itemList) => {
     const incrementer = _.find(basket, {id: itemList.id})
