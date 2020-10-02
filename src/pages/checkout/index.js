@@ -9,14 +9,14 @@ import ItemList from '../home/items-list'
 function Checkout() {
   
   const basket = useContext(BasketContext)
-  const selItems = _.find(ItemList, {id: basket.basket.id})
+  
   
   
   return (
     <div className='Container'>
       <div className='Basket-Contents'>
         <ul>
-         {selItems.map((items) => <li>{items.title}, Quantity: {items.quantity}, Price: {items.price*items.quantity}</li>)}
+         {basket.basket.map((selItems = _.find(ItemList, {id: basket.id})) => <li>{selItems.title}, Quantity: {selItems.quantity}, Price: {selItems.price*selItems.quantity}</li> )}
         </ul>
       </div>
     </div>
