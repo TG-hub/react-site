@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import _ from 'lodash'
+import './checkout.css'
+import {BasketContext} from '../../context/basket'
+import ItemList from '../home/items-list'
 
 
 
-function App() {
+function Checkout() {
+  
+  const basket = useContext(BasketContext)
+  const selItems = _.find(ItemList, {id: basket.basket.id})
+  
+  
   return (
-    <div style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', height: '100vh', flexDirection: 'column' }}>
-      <p>Checkout</p>
+    <div className='Container'>
+      <div className='Basket-Contents'>
+        <ul>
+         {selItems.map((items) => <li>{items.title}, Quantity: {items.quantity}, Price: {items.price*items.quantity}</li>)}
+        </ul>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Checkout;
