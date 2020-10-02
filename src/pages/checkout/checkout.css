@@ -1,4 +1,18 @@
 .Basket-Contents {
+    display: flex;
+    flex-direction: column;
     background-color: white;
+    max-width: 60%;
+    align-self: center;
+    color: #0569FF;
+    justify-items: flex-start;
+}
+
+.List-Item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#F59606 ;
+    margin: 10px;
     
 }

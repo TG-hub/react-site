@@ -8,7 +8,7 @@ import './sign-up.css'
 
 
 
-  function SignUp(props) {
+  const SignUp = (props) => {
   
   const [input, setInput] = useState('')
   const [inputTwo, setInputTwo] = useState('')
