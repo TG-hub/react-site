@@ -12,14 +12,15 @@ export const BasketContext = createContext({
 })
 
 
-  export const priceTotal = () => {
-        BasketContext.basket.map(() => {
-        const items = _.find(ItemList, {id: BasketContext.basket.id})
-        return (<div>
-            {BasketContext.basket.quantity*items.price}
-        </div>)
-    }
-    )
+
+export const priceTotal = () => {
+    
+    
+    
+    BasketContext.basket.map((selItems) => {
+    const items = _.find(ItemList, {id: selItems.id})
+    return <div>{selItems.quantity*items.price}</div>
+})
 }
 
 const BasketProvider = ({children}) => {

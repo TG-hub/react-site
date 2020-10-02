@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    max-width: 60%;
+    width: 60vh;
+    height: 60vh;
     align-self: center;
     color: #0569FF;
-    justify-items: flex-start;
+    justify-items: center;
+    margin: 20px;
 }
 
 .List-Item {
@@ -13,6 +15,20 @@
     display: flex;
     justify-content: space-evenly;
     background-color:#F59606 ;
-    margin: 10px;
+    margin: 10px 10px;
     
 }
+
+.Order-Button {
+    font-family: 'Arial';
+    font-style: 'normal';
+    font-weight: 'bold';
+    font-size: 16;
+    border-radius: 10;
+    color: #0569FF;
+    background-color:  #F59606;
+  }
+
+  .Input {
+      margin: 10px;
+  }

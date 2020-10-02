@@ -33,7 +33,7 @@ import './sign-up.css'
       <div className='Signup'>
       <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Name'}   />
       <Input textSetter={(event) => setInputTwo(event.target.value)} placeholder={'Email'}   />
-      <Button  buttonName={'Sign up'} submit={submitter}/>
+      <Button className='Button'  buttonName={'Sign up'} submit={submitter}/>
       </div>
     </div>
   );

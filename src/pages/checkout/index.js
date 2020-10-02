@@ -5,6 +5,7 @@ import {BasketContext, priceTotal}  from '../../context/basket'
 import ItemList from '../home/items-list'
 import Input from '../../components/input/input'
 import Button from '../../components/button/button'
+import '../../App.css'
 
 
 
@@ -43,9 +44,9 @@ const Checkout = (props) => {
         <p>Total Cost: {_.sum(priceTotal)}</p>
       </div>
       <div>
-          <Input  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />
-          <Input  textSetter={(event) => setPostCode(event.target.value)} placeholder={'Postcode'}   />
-          <Button  buttonName={'Order'} submit={submitter}/>
+          <Input className='Input'  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />
+          <Input className='Input' textSetter={(event) => setPostCode(event.target.value)} placeholder={'Postcode'}   />
+          <Button className='Order-Button' buttonName={'Order'} submit={submitter}/>
       </div>
     </div>
   );
