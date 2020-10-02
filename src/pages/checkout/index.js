@@ -16,7 +16,9 @@ function Checkout() {
     <div className='Container'>
       <div className='Basket-Contents'>
         <ul>
-         {basket.basket.map((selItems = _.find(ItemList, {id: basket.id})) => <li>{selItems.title}, Quantity: {selItems.quantity}, Price: {selItems.price*selItems.quantity}</li> )}
+         {basket.basket.map((selItems) => 
+           selItems = _.find(ItemList, {id: basket.id})
+           <li>{selItems.title}, Quantity: {selItems.quantity}, Price: {selItems.price*selItems.quantity}</li>  )}
         </ul>
       </div>
     </div>
