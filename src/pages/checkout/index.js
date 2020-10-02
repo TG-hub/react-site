@@ -12,8 +12,8 @@ const Checkout = (props) => {
   
   const basket = useContext(BasketContext)
   
-  const [input, setInput] = useState ('')
-  const [inputTwo, setInputTwo] = useState ('')
+  const [address, setAddress] = useState ('')
+  const [postCode, setPostCode] = useState ('')
   
   const onClick = () => {
     props.history.push('/confirmation')
@@ -21,7 +21,7 @@ const Checkout = (props) => {
   const submitter = () => {
     return (
       <div>
-       {input.length === 0, inputTwo.length===0 ? null : onClick()}
+       {address.length === 0, postCode.length===0 ? null : onClick()}
       </div>
     )
   }
@@ -42,8 +42,8 @@ const Checkout = (props) => {
         <p>Total Cost:</p>
       </div>
       <div>
-          <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Address Line 1'}   />
-          <Input  textSetter={(event) => setInputTwo(event.target.value)} placeholder={'Postcode'}   />
+          <Input  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />
+          <Input  textSetter={(event) => setPostCode(event.target.value)} placeholder={'Postcode'}   />
           <Button  buttonName={'Order'} submit={submitter}/>
       </div>
     </div>
