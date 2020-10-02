@@ -12,20 +12,20 @@ export const BasketContext = createContext({
 })
 
 
-  
-
-const BasketProvider = ({children}) => {
-    const [basket, setBasket] = useState ([])
-    
-    const priceTotal = () => {
-        basket.map((selItem) => {
-        const items = _.find(basket, {id: selItem.id})
+  export const priceTotal = () => {
+        BasketContext.basket.map(() => {
+        const items = _.find(ItemList, {id: BasketContext.basket.id})
         return (<div>
-            {items.quantity*ItemList.price}
+            {BasketContext.basket.quantity*items.price}
         </div>)
     }
     )
 }
+
+const BasketProvider = ({children}) => {
+    const [basket, setBasket] = useState ([])
+    
+    
  
     const updateBasket = (itemList) => {
     const incrementer = _.find(basket, {id: itemList.id})
