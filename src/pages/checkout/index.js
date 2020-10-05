@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import _, { sum } from 'lodash'
 import './checkout.css'
-import {BasketContext, priceTotal}  from '../../context/basket'
+import {BasketContext}  from '../../context/basket'
 import ItemList from '../home/items-list'
 import Input from '../../components/input/input'
 import Button from '../../components/button/button'
@@ -28,7 +28,10 @@ const Checkout = (props) => {
     )
   }
 
-  
+  const priceTotal = () => {basket.basket.map((selItems) => {
+          const item = _.find(ItemList, {id: selItems.id})
+          return item.price*selItems.quantity
+        })}
 
   
   return (
