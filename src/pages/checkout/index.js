@@ -5,7 +5,7 @@ import {BasketContext}  from '../../context/basket'
 import ItemList from '../home/items-list'
 import Input from '../../components/input/input'
 import Button from '../../components/button/button'
-import '../../App.css'
+
 
 
 
@@ -28,11 +28,12 @@ const Checkout = (props) => {
     )
   }
 
-  const priceTotal = () => {basket.basket.map((selItems) => {
+  const priceTotal = () => basket.basket.map((selItems) => {
           const item = _.find(ItemList, {id: selItems.id})
           return item.price*selItems.quantity
-        })}
+        })
 
+  
   
   return (
     <div className='Container'>
@@ -44,12 +45,12 @@ const Checkout = (props) => {
         </ul>
       </div>
       <div>
-        <p>Total Cost: {_.sum(priceTotal)}</p>
+        <p>Total Cost: {_.sum(priceTotal())}</p>
       </div>
       <div>
           <Input className='Input'  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />
           <Input className='Input' textSetter={(event) => setPostCode(event.target.value)} placeholder={'Postcode'}   />
-          <Button className='Order-Button' buttonName={'Order'} submit={submitter}/>
+          <Button className='Order' buttonName={'Order'} submit={submitter}/>
       </div>
     </div>
   );
