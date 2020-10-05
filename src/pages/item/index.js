@@ -38,7 +38,7 @@ const Item = (props) => {
         <img className='product-image' src={selection.image[option]}/>
         <div className='Item-Details'>
           <p>{selection.title}</p>
-          <p>{selection.price}</p>
+          <p>£{selection.price}</p>
             <select onChange={(event) => setOption(event.target.value)}>
               {selection.image.map((item, index) => <option value={index}>Option {index+1}</option>)}
             </select>

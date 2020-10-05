@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import _, { sum } from 'lodash'
+import _ from 'lodash'
 import './checkout.css'
 import {BasketContext}  from '../../context/basket'
 import ItemList from '../home/items-list'
@@ -41,11 +41,11 @@ const Checkout = (props) => {
         <ul>
            {basket.basket.map((selItems) => {
            const item = _.find(ItemList, {id: selItems.id})
-          return <li className='List-Item'>Item Name:{item.title} Quantity: {selItems.quantity} Price: {item.price*selItems.quantity}</li>  })}
+          return <li className='List-Item'>Item Name: {item.title} Quantity: {selItems.quantity} Price: £{item.price*selItems.quantity}</li>  })}
         </ul>
       </div>
       <div>
-        <p>Total Cost: {_.sum(priceTotal())}</p>
+        <p>Total Cost: £{_.sum(priceTotal())}</p>
       </div>
       <div>
           <Input className='Input'  textSetter={(event) => setAddress(event.target.value)} placeholder={'Address Line 1'}   />
