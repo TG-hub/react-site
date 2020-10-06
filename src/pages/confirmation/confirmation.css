@@ -1,0 +1,28 @@
+.Summary {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75vh;
+    height: 60vh;
+    align-self: center;
+    color: black;
+    margin: 20px;
+    overflow: scroll;
+    text-align: left;
+    padding: 10px;
+}
+
+.SummaryTwo {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75vh;
+    height: 60vh;
+    align-self: center;
+    color: black;
+    margin-left: 40px;
+    overflow: scroll;
+    text-align: left;
+    padding: 10px;
+}
+
