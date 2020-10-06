@@ -6,19 +6,16 @@
     height: 60vh;
     align-self: center;
     color: #0569FF;
-    justify-items: center;
     margin: 20px;
-    align-items: baseline;
+    overflow: scroll;
 }
 
 .List-Item {
-    list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
     background-color:#F59606 ;
-    margin: 10px 10px;
-    height: 30px;
     padding: 10px;
+    width: 65vh;
+    align-self: center;
 }
 
 .Order {

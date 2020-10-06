@@ -9,6 +9,10 @@ import Button from '../../components/button/button'
 
 
 
+
+
+
+
 const Checkout = (props) => {
   
   const basket = useContext(BasketContext)
@@ -28,13 +32,14 @@ const Checkout = (props) => {
     )
   }
 
-  const priceTotal = () => basket.basket.map((selItems) => {
+  
+  const priceTotal = () => 
+          basket.basket.map((selItems) => {
           const item = _.find(ItemList, {id: selItems.id})
           return item.price*selItems.quantity
         })
+  
 
-  
-  
   return (
     <div className='Container'>
       <div className='Basket-Contents'>
