@@ -1,29 +1,38 @@
 import React, { useState } from 'react'
 import '../../App.css'
-
- /*export const styles = {fontFamily: 'Arial',
-        fontStyle: 'normal',
-        fontWeight: 'bold',
-        fontSize: 16,
-        borderRadius: 10,
-        color: '#0569FF'}
-
-*/
+import styled, { css } from 'styled-components'
 
 
-const Input = (props) => {
+const Input = (props, {className}) => {
     
-    
-    //const textSetter = (event) => setInput(event.target.value)
-
-   
 
     return (
         
         <div>
-            <input className={'Input'} type="text" onChange={props.textSetter} placeholder={props.placeholder} />
+            <input className={className} type="text" onChange={props.textSetter} placeholder={props.placeholder} />
         </div>
     )
 }
 
-export default Input
+
+const StyledInput = styled(Input)`
+ font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+border-radius: 15px;
+padding: 5px;
+border: none;
+color: #0569FF;
+width: 300px;
+
+ ${props => props.long && css`
+ width: 75vh;
+ `}
+`;
+
+
+
+
+export default StyledInput

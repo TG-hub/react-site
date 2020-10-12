@@ -10,8 +10,14 @@ import Confirmation from './pages/confirmation'
 import Item from './pages/item'
 import Checkout from './pages/checkout'
 import ContextSource from './context/root'
+import * as firebase from 'firebase'
+
 
 function App() {
+
+const app = firebase.initializeApp({})
+
+
   return (
     <ContextSource>
     <Router>
@@ -26,5 +32,8 @@ function App() {
     </ContextSource>
   );
 }
+
+
+
 
 export default App;

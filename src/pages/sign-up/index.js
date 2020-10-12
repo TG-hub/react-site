@@ -1,10 +1,10 @@
 import React from 'react';
 import Input from '../../components/input/input'
-import Button from '../../components/button/button'
 import { useState } from 'react';
 import '../../App.css'
 import './sign-up.css'
-
+import styled from 'styled-components'
+import StyledButton from '../../components/button/button';
 
 
 
@@ -33,7 +33,7 @@ import './sign-up.css'
       <div className='Signup'>
       <Input  textSetter={(event) => setInput(event.target.value)} placeholder={'Name'}   />
       <Input textSetter={(event) => setInputTwo(event.target.value)} placeholder={'Email'}   />
-      <Button className='Button'  buttonName={'Sign up'} submit={submitter}/>
+      <StyledButton className='Button'  buttonName={'Sign up'} submit={submitter}/>
       </div>
     </div>
   );
